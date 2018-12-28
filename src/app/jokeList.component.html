@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+  
+</div>
+<div class="card card-block bg-primary" *ngFor="let joke of jokeList">
+  <h4 class="card-title">{{joke.heading}}</h4>
+  <p class="card-text">{{joke.tagLine}}</p>
+</div>
+
