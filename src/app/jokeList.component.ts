@@ -15,15 +15,18 @@ export class JokeComponentList {
     this.jokeList = [
         {
           heading: "What did the cheese say when it looked in the mirror?",
-          tagLine: "Hello-Me (Halloumi)"
+          tagLine: "Hello-Me (Halloumi)",
+          hide: "true"
         },
         {
           heading: "What kind of cheese do you use to disguise a small horse?",
-          tagLine: "Mask-a-pony (Mascarpone)"
+          tagLine: "Mask-a-pony (Mascarpone)",
+          hide: "true"
         },
         {
           heading: "A kid threw a lump of cheddar at me",
-          tagLine: "I thought ‘That’s not very mature’"
+          tagLine: "I thought ‘That’s not very mature’",
+          hide: "true"
         }
     ];
   }
