@@ -17,14 +17,14 @@ class Joke {
 
 @Component({
   selector: 'joke-list',
-  templateUrl: './jokeList.component.html',
-  styleUrls: ['./jokeList.component.css']
+  templateUrl: './joke-list.component.html',
+  styleUrls: ['./joke-list.component.css']
 })
-export class JokeComponentList {
+export class JokeListComponent {
   //heading : String;
   //tagLine : String;
   title = 'Jokes List';
-  jokeList : Joke[];
+  jokeList : Object[];
 
   constructor(){
     this.jokeList = [
@@ -34,3 +34,4 @@ export class JokeComponentList {
     ];
   }
 }
+
