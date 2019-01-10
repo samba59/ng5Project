@@ -5,4 +5,5 @@
   </h1>
   
 </div>-->
-<joke *ngFor="let j of jokeList" [joke]="j"></joke>
+<joke-form (jokeCreated)="addJoke($event)"></joke-form>
+<joke *ngFor="let j of jokeList" [joke]="j" (jokeDeleted)="deleteJoke($event)"></joke>

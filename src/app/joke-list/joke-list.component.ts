@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 class Joke {
   heading : String;
@@ -24,7 +25,7 @@ export class JokeListComponent {
   //heading : String;
   //tagLine : String;
   title = 'Jokes List';
-  jokeList : Object[];
+  jokeList : Joke[];
 
   constructor(){
     this.jokeList = [
@@ -32,6 +33,19 @@ export class JokeListComponent {
       new Joke("What kind of cheese do you use to disguise a small horse?", "Mask-a-pony (Mascarpone)"),
       new Joke("A kid threw a lump of cheddar at me", "I thought ‘That’s not very mature’"),
     ];
+  }
+
+  addJoke(joke) {
+    this.jokeList.unshift(joke);
+  }
+
+  deleteJoke(joke) {
+    let jokeEntries = this.jokeList.entries;
+    this.jokeList.forEach(element => {
+      if(element.heading == joke.heading) {
+        this.jokeList.shift();
+      }
+    });
   }
 }
 

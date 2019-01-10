@@ -2,4 +2,5 @@
   <h4 class="card-title">{{joke.heading}}</h4>
   <p class="card-text" [hidden]="joke.hide">{{joke.tagLine}}</p>
   <a class="btn btn-primary" (click)="joke.toggle()">Tell Me</a>
+  <a class="btn btn-primary" (click)="deleteJoke(joke)">Delete</a>
 </div>
